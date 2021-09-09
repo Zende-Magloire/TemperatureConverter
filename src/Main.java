@@ -11,6 +11,10 @@ public class Main
         //  Ask user for temp in F. Read it in. Convert to C. Display output.
         System.out.println("Let's convert temperature!");
         System.out.print("What's the temperature in Fahrenheit? ");
+                buffer = reader.nextLine();
+                Float TempF = Float.parseFloat(buffer);
+                Float TempC = (TempF - 32.0f) * (5/9.0f);
+                System.out.println("The temperature in degrees celsius is " + TempC + "°C");
 
         // TODO: compute height of building
         //  Assume 20ft away. Ask how tall. Ask for angle of elevation.
