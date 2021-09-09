@@ -17,11 +17,22 @@ public class Main
                 System.out.println("The temperature in degrees celsius is " + TempC + "°C");
 
         // TODO: compute height of building
-        //  Assume 20ft away. Ask how tall. Ask for angle of elevation.
+        //  Ask how far away. Ask how tall. Ask for angle of elevation.
         //  Compute height of building using Math.tan(). Display output.
         System.out.println("Let's roughly compute the height of a building.");
-        System.out.println("Assume you are standing 20ft away.");
-        System.out.print("How tall are you (ft)? ");
+        System.out.print("How far (in ft) are you from the building? ");
+            buffer = reader.nextLine();
+            Float far = Float.parseFloat(buffer);
+                System.out.print("How tall are you (ft)? ");
+                buffer = reader.nextLine();
+                Float tall = Float.parseFloat(buffer);
+                    System.out.print("What is the angle of elevation? ");
+                    buffer = reader.nextLine();
+                    Float angle = Float.parseFloat(buffer);
+                       Double heightF = (Math.tan(Math.toRadians(angle)) * far) + tall;
+                        System.out.println("The building is " + heightF + " ft tall.");
+                            Double heightM = heightF / 3.281;
+                        System.out.println("The building is " + heightM + " m tall.");
 
         // TODO: compute probability of coveted loot.
         //  Ask for drop rate as percentage. Convert to fraction (divide by 100).
