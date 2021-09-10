@@ -29,10 +29,10 @@ public class Main
                     System.out.print("What is the angle of elevation? ");
                     buffer = reader.nextLine();
                     Float angle = Float.parseFloat(buffer);
-                       Double heightF = (Math.tan(Math.toRadians(angle)) * far) + tall;
-                        System.out.println("The building is " + heightF + " ft tall.");
+                       Double heightF = ((Math.tan(Math.toRadians(angle)) * far) + tall);
+                        System.out.println("The building is " + heightF.floatValue() + " ft tall.");
                             Double heightM = heightF / 3.281;
-                        System.out.println("The building is " + heightM + " m tall.");
+                        System.out.println("The building is " + heightM.floatValue() + " m tall.");
 
         // TODO: compute probability of coveted loot.
         //  Ask for drop rate as percentage. Convert to fraction (divide by 100).
