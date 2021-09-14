@@ -6,7 +6,7 @@ public class Main
     public static void main(String[] args)
     {
         //test
-        //stuff
+        //final
         Scanner reader = new Scanner(System.in);
         String buffer;
 
